@@ -1,9 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-function Card() {
+function Card({
+  onclick,
+  id,
+  isSelected,
+}: {
+  onclick: () => void;
+  id: Number;
+  isSelected: boolean;
+}) {
   return (
     <div className="p-[5px]">
-      <div className="p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-3px] transition duration-[0.2] hover:shadow-lg">
+      <div
+        className={`p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-3px] transition duration-[0.2] hover:shadow-lg ${
+          isSelected ? "border-[3px] border-nodeflair-green" : ""
+        }`}
+        onClick={() => onclick()}
+      >
         <div className="p-5">
           <CardHeader />
           <CardDetails />
@@ -19,7 +32,7 @@ export default Card;
 
 const CardHeader = () => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row">
       <img
         src={"./gdsc.webp"}
         alt="Company image"

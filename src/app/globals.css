@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @layer base {
-  :root {
-    --gray: #6c757d;
-    --recent-posting: #1fc76a;
-    --tag: #ddf7e9;
-    --techstack-word: #838383;
-    --techstack-tag: #f1f1f1;
-  }
-} */

@@ -16,10 +16,14 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        xl: "1010px",
+      },
       colors: {
         background: "#f3f2ef",
         nodeflair: {
           green: "#1fc76a",
+          brightGreen: "#28a745",
           bgGreen: "#ddf7e9",
           lightGrey: "#838383",
           lighestGrey: "#f1f1f1",
