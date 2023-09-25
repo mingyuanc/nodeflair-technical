@@ -1,0 +1,140 @@
+[
+  {
+    "company": "AsiaPac Technology Pte Ltd (from M1)",
+    "companyImg": "./gdsc.webp",
+    "stars": 3.5,
+    "title": "Senior System Engineer (Dell VxRail)",
+    "specialisation": "Syst. Eng",
+    "duration": "1 day",
+    "location": "Singapore",
+    "salary": "S$4,800-S$9,000",
+    "techStack": ["Windows Server", "VSphere", "VMare", "Linux"]
+  },
+
+  {
+    "company": "Cloud Kinetics",
+    "companyImg": "./next.svg",
+    "stars": 4,
+    "title": "Software Development Engineer(Java, API & Mircoservices)",
+    "specialisation": "Backend",
+    "duration": "1 day",
+    "location": "Singapore",
+    "salary": "S$6,000-S$8,000",
+    "techStack": [
+      "OAuth",
+      "API Gateway",
+      "Swagger",
+      "Go",
+      "API",
+      "Spring",
+      "XSD",
+      "ORM",
+      "Java",
+      "Springboot",
+      "SQL",
+      "JSON",
+      "XML",
+      "Node.js",
+      "Python"
+    ]
+  },
+  {
+    "company": "Softenger",
+    "companyImg": "./vercel.svg",
+    "stars": -1,
+    "title": "System Engineer (VMware, Storage, Hyper-V, Windows, and backup solutions preferably with SI background)",
+    "specialisation": "Syst. Eng",
+    "duration": "2 days",
+    "location": "Singapore",
+    "salary": "S$4,500-S$5,000",
+    "techStack": ["AWS", "Microsoft", "VMware", "Azure"]
+  },
+  {
+    "company": "IHiS",
+    "companyImg": "./vercel.svg",
+    "stars": 3.3,
+    "title": "Frontend Engineer, ReactJS",
+    "specialisation": "Frontend",
+    "duration": "2 days",
+    "location": "Singapore",
+    "salary": "S$6,000-S$8,200",
+    "techStack": [
+      "EcmaScript",
+      "Axios",
+      "SPA",
+      "Jest",
+      "Redux",
+      "Typescript",
+      "React"
+    ]
+  },
+  {
+    "company": "AsiaPac Technology Pte Ltd (from M1)",
+    "companyImg": "./gdsc.webp",
+    "stars": 3.5,
+    "title": "Senior System Engineer (Dell VxRail)",
+    "specialisation": "Syst. Eng",
+    "duration": "1 day",
+    "location": "Singapore",
+    "salary": "S$4,800-S$9,000",
+    "techStack": ["Windows Server", "VSphere", "VMare", "Linux"]
+  },
+
+  {
+    "company": "Cloud Kinetics",
+    "companyImg": "./next.svg",
+    "stars": 4,
+    "title": "Software Development Engineer(Java, API & Mircoservices)",
+    "specialisation": "Backend",
+    "duration": "1 day",
+    "location": "Singapore",
+    "salary": "S$6,000-S$8,000",
+    "techStack": [
+      "OAuth",
+      "API Gateway",
+      "Swagger",
+      "Go",
+      "API",
+      "Spring",
+      "XSD",
+      "ORM",
+      "Java",
+      "Springboot",
+      "SQL",
+      "JSON",
+      "XML",
+      "Node.js",
+      "Python"
+    ]
+  },
+  {
+    "company": "Softenger",
+    "companyImg": "./vercel.svg",
+    "stars": -1,
+    "title": "System Engineer (VMware, Storage, Hyper-V, Windows, and backup solutions preferably with SI background)",
+    "specialisation": "Syst. Eng",
+    "duration": "2 days",
+    "location": "Singapore",
+    "salary": "S$4,500-S$5,000",
+    "techStack": ["AWS", "Microsoft", "VMware", "Azure"]
+  },
+  {
+    "company": "IHiS",
+    "companyImg": "./vercel.svg",
+    "stars": 3.3,
+    "title": "Frontend Engineer, ReactJS",
+    "specialisation": "Frontend",
+    "duration": "2 days",
+    "location": "Singapore",
+    "salary": "S$6,000-S$8,200",
+    "techStack": [
+      "EcmaScript",
+      "Axios",
+      "SPA",
+      "Jest",
+      "Redux",
+      "Typescript",
+      "React"
+    ]
+  }
+]

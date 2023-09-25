@@ -1,28 +1,50 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+interface Data {
+  company: string;
+  companyImg: string;
+  stars: number;
+  title: string;
+  specialisation: string;
+  duration: string;
+  location: string;
+  salary: string;
+  techStack: string[];
+}
+
 function Card({
   onclick,
-  id,
+  data,
   isSelected,
 }: {
   onclick: () => void;
-  id: Number;
+  data: Data;
   isSelected: boolean;
 }) {
   return (
-    <div className="p-[5px]">
+    <div className="py-[5px] px-5 xl:px-0">
       <div
-        className={`p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-3px] transition duration-[0.2] hover:shadow-lg ${
-          isSelected ? "border-[3px] border-nodeflair-green" : ""
+        className={`p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-2px] transition duration-[0.2] hover:shadow-lg ${
+          isSelected ? "xl:border-[3px] xl:border-nodeflair-green" : ""
         }`}
         onClick={() => onclick()}
       >
         <div className="p-5">
-          <CardHeader />
-          <CardDetails />
+          <CardHeader
+            companyImg={data.companyImg}
+            company={data.company}
+            title={data.title}
+            stars={data.stars}
+            specialisation={data.specialisation}
+          />
+          <CardDetails
+            duration={data.duration}
+            location={data.location}
+            salary={data.salary}
+          />
           <hr className="h-px mt-[10px] mb-[-15px] bg-gray-200 border-0 dark:bg-nodeflair-grey"></hr>
         </div>
-        <CardStack />
+        <CardStack techStack={data.techStack} />
       </div>
     </div>
   );
@@ -30,37 +52,55 @@ function Card({
 
 export default Card;
 
-const CardHeader = () => {
+const CardHeader = ({
+  companyImg,
+  company,
+  title,
+  stars,
+  specialisation,
+}: {
+  companyImg: string;
+  company: string;
+  title: string;
+  stars: number;
+  specialisation: string;
+}) => {
   return (
     <div className="flex flex-row">
       <img
-        src={"./gdsc.webp"}
+        src={companyImg}
         alt="Company image"
         className="w-[45px] h-[45px] mr-[10px]"
       />
       <div className="flex flex-col ">
         <p className="font-normal text-sm">
-          <span>AsiaPac Technology Pte Ltd (from M1)</span>
-          <span>&nbsp;&nbsp;3.5&nbsp;★</span>
+          <span>{company}</span>
+          {stars != -1 && <span>&nbsp;&nbsp;{stars}&nbsp;★</span>}
         </p>
-        <h2 className="font-bold">Senior System Engineer (Dell VxRail)</h2>
+        <h2 className="font-bold text-ellipsis line-clamp-2">{title}</h2>
       </div>
       <div className="ml-auto pl-[10px] text-sm">
         <div className="bg-nodeflair-bgGreen text-nodeflair-green w-max px-2 py-[5px] rounded-[5px] font-semibold">
-          Syst. Eng
+          {specialisation}
         </div>
       </div>
     </div>
   );
 };
 
-const CardDetails = () => {
+const CardDetails = ({
+  duration,
+  location,
+  salary,
+}: {
+  duration: string;
+  location: string;
+  salary: string;
+}) => {
   return (
     <div className="pl-[55px] w-full text-sm">
       <div className="flex mb-[6px]">
-        <span className="text-nodeflair-green font-bold">
-          about 23 hours ago
-        </span>
+        <span className="text-nodeflair-green font-bold">{duration} ago</span>
         <div className="text-nodeflair-lightGrey flex font-normal">
           &nbsp; &nbsp;
           <FontAwesomeIcon
@@ -68,45 +108,33 @@ const CardDetails = () => {
             size="2xs"
             className="h-[14px] mt-1"
           />
-          &nbsp;Singapore
+          &nbsp;{location}
         </div>
       </div>
       <div>
-        <p className="font-medium mb-[2px]">S$4,800 - S$9,000 / mth </p>
+        <p className="font-medium mb-[2px]">{salary} / mth </p>
       </div>
     </div>
   );
 };
 
-const CardStack = () => {
+const CardStack = ({ techStack }: { techStack: Array<string> }) => {
   return (
     <div className="px-[15px] overflow-hidden text-ellipsis min-h-[40px] whitespace-nowrap">
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
-      <TechStack />
-      &nbsp;
+      {techStack.map((x) => (
+        <TechStack key={Math.random()} val={x} />
+      ))}
     </div>
   );
 };
 
-const TechStack = () => {
+const TechStack = ({ val }: { val: string }) => {
   return (
-    <span className="py-[5px] px-2 bg-nodeflair-lighestGrey text-nodeflair-lightGrey rounded-[5px] inline-block">
-      GOlang
-    </span>
+    <>
+      <span className="py-[5px] px-2 bg-nodeflair-lighestGrey text-nodeflair-lightGrey rounded-[5px] inline-block">
+        {val}
+      </span>
+      &nbsp;
+    </>
   );
 };
