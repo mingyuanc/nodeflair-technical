@@ -3,7 +3,7 @@ function JobDescription({ title }: { title: string }) {
     <div className="h-0 w-0 xl:min-h-[200px] xl:max-h-[60vh] xl:h-auto xl:w-auto rounded-lg bg-white flex-grow sticky overflow-auto top-11">
       <div className="xl:px-[28px] xl:py-[29px]">
         <h1 className="font-bold text-3xl">{title}</h1>
-        <h2>// Filler text</h2>
+        <h2>---Filler text---</h2>
         <p>
           · BS/MS degree or equivalent with 5+ years in the field of Software
           Engineering and Development · An obsession with customer experience,

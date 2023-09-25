@@ -24,7 +24,7 @@ function Card({
   return (
     <div className="py-[5px] px-5 xl:px-0">
       <div
-        className={`p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-2px] transition duration-[0.2s] hover:shadow-lg ${
+        className={`p-[5px] bg-white rounded-lg shadow-custom hover:cursor-pointer hover:translate-y-[-2px] transition duration-200 hover:shadow-lg ${
           isSelected ? "xl:border-[3px] xl:border-nodeflair-green" : ""
         }`}
         onClick={() => onclick()}
