@@ -67,23 +67,23 @@ const CardHeader = ({
   specialisation: string;
 }) => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row flex-wrap xl:flex-nowrap">
       <img
         src={companyImg}
         alt="Company image"
         className="w-[45px] h-[45px] mr-[10px]"
       />
-      <div className="flex flex-col ">
+      <div className="ml-auto pl-[10px] text-sm xl:order-3">
+        <div className="bg-nodeflair-bgGreen text-nodeflair-green w-max px-2 py-[5px] rounded-[5px] font-semibold">
+          {specialisation}
+        </div>
+      </div>
+      <div className="flex flex-col basis-full shrink xl:!basis-auto xl:!mt-0">
         <p className="font-normal text-sm">
           <span>{company}</span>
           {stars != -1 && <span>&nbsp;&nbsp;{stars}&nbsp;★</span>}
         </p>
         <h2 className="font-bold text-ellipsis line-clamp-2">{title}</h2>
-      </div>
-      <div className="ml-auto pl-[10px] text-sm">
-        <div className="bg-nodeflair-bgGreen text-nodeflair-green w-max px-2 py-[5px] rounded-[5px] font-semibold">
-          {specialisation}
-        </div>
       </div>
     </div>
   );
@@ -99,7 +99,7 @@ const CardDetails = ({
   salary: string;
 }) => {
   return (
-    <div className="pl-[55px] w-full text-sm">
+    <div className="xl:pl-[55px] w-full text-sm">
       <div className="flex mb-[6px]">
         <span className="text-nodeflair-green font-bold">{duration} ago</span>
         <div className="text-nodeflair-lightGrey flex font-normal">

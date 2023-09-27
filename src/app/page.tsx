@@ -6,7 +6,7 @@ import data from "../data.json";
 export default function Home() {
   const [selected, setSelected] = useState(data[0]);
   return (
-    <div className="max-w-[1110px] w-full h-max flex">
+    <div className="max-w-[1110px] w-full h-max flex xl:px-3">
       <div className="w-full p-[5px] xl:w-[29.5rem] xl:pt-10">
         {data.map((x) => (
           <Card
@@ -17,7 +17,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="invisible xl:visible xl:px-[5px]">
+      <div className="hidden xl:block xl:px-[5px]">
         <JobDescription title={selected.title} />
       </div>
     </div>
