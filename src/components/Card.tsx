@@ -113,7 +113,9 @@ const CardDetails = ({
         </div>
       </div>
       <div>
-        <p className="font-medium mb-[2px]">{salary} / mth </p>
+        {salary != "" && (
+          <p className="font-medium mb-[2px]">{salary} / mth </p>
+        )}
       </div>
     </div>
   );
